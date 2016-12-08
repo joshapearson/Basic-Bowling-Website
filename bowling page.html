@@ -1,0 +1,102 @@
+﻿
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta charset="utf-8" />
+</head>
+<body>
+    <style>
+        .framebox {
+            border: 1px dashed black;
+        }
+    </style>
+
+
+    <button onclick="myFunction();onClick()">Roll</button>
+    <div class="row">
+        <div class="col-xs-12">
+            Pins Hit:
+        </div>
+        <p id="Pins"></p>
+        <div class="col-xs-12"> Frame Number</div>
+        <div id="clicks"></div>
+        <br />
+        <h5 class="text-center">Frames</h5>
+        <ul>
+            <li class="framebox col-xs-1" id="frame1" name="Frame 1"></li>
+            <li class="framebox col-xs-1" id="frame2" name="Frame 2"></li>
+            <li class="framebox col-xs-1" id="frame3" name="Frame 3"></li>
+            <li class="framebox col-xs-1" id="frame4" name="Frame 4"></li>
+            <li class="framebox col-xs-1" id="frame5" name="Frame 5"></li>
+            <li class="framebox col-xs-1" id="frame6" name="Frame 6"></li>
+            <li class="framebox col-xs-1" id="frame7" name="Frame 7"></li>
+            <li class="framebox col-xs-1" id="frame8" name="Frame 8"></li>
+            <li class="framebox col-xs-1" id="frame9" name="Frame 9"></li>
+            <li class="framebox col-xs-1" id="frame10" name="Frame 10"></li>
+        </ul>
+    </div>
+
+
+    <script>
+
+        function myFunction() {
+            var x = Math.floor((Math.random() * 10) + 1);
+            document.getElementById("Pins").innerHTML = x;
+        }
+        var clicks = 0;
+        function onClick() {
+            clicks += 1;
+            if (clicks > 10) {
+                clicks = 0;
+            }
+            document.getElementById("clicks").innerHTML = clicks;
+
+        if (typeof (Storage) !== "undefined") {
+            if ((clicks) == 1) {
+                (localStorage.setItem("#frame1", clicks))
+                document.getElementById("frame1").innerHTML = localStorage.getItem("#frame1");
+            }
+
+        else if (clicks == 2) {
+            (localStorage.setItem("#frame2", clicks))
+            document.getElementById("frame2").innerHTML = localStorage.getItem("#frame2");
+        }
+        else if (clicks == 3) {
+            (localStorage.setItem("#frame3", clicks))
+            document.getElementById("frame3").innerHTML = localStorage.getItem("#frame3");
+        }
+        else if (clicks == 4) {
+            (localStorage.setItem("#frame4", clicks))
+            document.getElementById("frame4").innerHTML = localStorage.getItem("#frame4");
+        }
+        else if (clicks == 5) {
+            (localStorage.setItem("#frame5", clicks))
+            document.getElementById("frame5").innerHTML = localStorage.getItem("#frame5");
+        }
+        else if (clicks == 6) {
+            (localStorage.setItem("#frame6", clicks))
+            document.getElementById("frame6").innerHTML = localStorage.getItem("#frame6");
+        }
+        else if (clicks == 7) {
+            (localStorage.setItem("#frame7", clicks))
+            document.getElementById("frame7").innerHTML = localStorage.getItem("#frame7");
+        }
+        else if (clicks == 8) {
+            (localStorage.setItem("#frame8", clicks))
+            document.getElementById("frame8").innerHTML = localStorage.getItem("#frame8");
+        }
+        else if (clicks == 9) {
+            (localStorage.setItem("#frame9", clicks))
+            document.getElementById("frame9").innerHTML = localStorage.getItem("#frame9");
+        }
+        else if (clicks == 10) {
+            (localStorage.setItem("#frame10", clicks))
+            document.getElementById("frame10").innerHTML = localStorage.getItem("#frame10");
+        }
+        }
+        }
+    </script>
+</body>
+</html>
